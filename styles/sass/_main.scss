@@ -1,0 +1,165 @@
+ul {
+    padding-left: 0;
+}
+
+// SECTION ONE & SECTION THREE
+
+.formSectionOneSub, .formSectionTwoSub, .formSectionThreeSub {
+    display: flex;
+}
+
+.leftBox, .rightBox {
+    width: 50%;
+    padding: 6vw 0;
+}
+
+.leftBox {
+    border-right: 1px solid black;
+}
+
+.formSectionOneLeft, .formSectionOneRight, .formSectionThreeLeft, .formSectionThreeRight {
+    padding: 6vw 0;
+    text-align: center;
+}
+
+.formSectionOneLeft, .formSectionThreeLeft {
+    padding-right: 13vw;
+}
+
+.formSectionOneRight, .formSectionThreeRight {
+    background: linear-gradient(to right, white 30%, salmon 30%);
+    img {
+        position: relative;
+        right: 6vw;
+    }
+}
+
+// SECTION TWO
+
+.formSectionTwoLeft, .formSectionTwoRight {
+    padding: 6vw 0;
+}
+
+.formSectionTwoRight {
+    padding-left: 13vw;
+    text-align: center;
+}
+
+.formSectionTwoLeft {
+    background: linear-gradient(to left, white 30%, salmon 30%);
+    img {
+        position: relative;
+        left: 6vw;
+    }
+}
+
+// SECTION THREE
+
+.formSectionThreeSub .leftBox, .formSectionThreeSub .rightBox {
+    padding-bottom: 20vw;
+}
+
+// SECTION FOUR
+
+.formSectionFourSub {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vw;
+}
+
+// FORMS
+
+fieldset { 
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.radioBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 140px;
+}
+
+.radioBox:last-child {
+    margin-bottom: 0;
+}
+
+[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+/* Styles for individual labels */
+.toggleLabel {
+    text-align: center;
+    padding: 15px 0 8px 0;
+    z-index: 10;
+}
+
+.toggleLabel:hover {
+    cursor: pointer;
+}
+
+/* Make the toggle background */
+.toggleLabel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: white;
+    border: 1px solid black;
+    z-index: -1;
+}
+
+/* Change the background color when the toggle is checked */
+[type="radio"]:checked + .toggleLabel::before {
+    background: black;
+}
+
+[type="radio"]:checked + .toggleLabel {
+    color: white;
+}
+
+// Hover state for unchecked
+
+[type="radio"]:hover + .toggleLabel::before {
+    background: black;
+}
+
+[type="radio"]:hover + .toggleLabel {
+    color: white;
+}
+
+[type=submit] {
+    text-align: center;
+    width: 180px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 0 2px 0;
+}
+
+[type=submit]:hover {
+    background: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+

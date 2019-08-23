@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Skincare Generator</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Ramaraja&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="headerWrapper">
+            <h1>Skincare <span>Generator</span></h1>
+            <p>Personalized routines based on modern skin care principles.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="formSectionOne">
+            <div class="formSectionOneSub wrapper">
+                <div class="leftBox">
+                    <div class="formSectionOneLeft">
+                        <form action="#" method="#" class="skincareForm" autocomplete="off" name="skincareForm">
+                            <h3>Age</h3>
+                            <p>
+                                Allows us to determine the emphasis on preventative and
+                                anti-aging products.
+                            </p>
+
+                            <fieldset>
+                                <legend class="visuallyHidden">Select your age:</legend>
+
+                                <div class="radioBox">
+
+                                    <input type="radio" name="age" value="youngAge" id="youngAge" checked="true"/>
+                                    <label for="youngAge" class="toggleLabel">Under 27</label>
+
+                                </div>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="age" value="middleAge" id="middleAge" />
+                                    <label for="middleAge" class="toggleLabel">27 to 35</label>
+                                </div>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="age" value="oldAge" id="oldAge" />
+                                    <label for="oldAge" class="toggleLabel">36 and Over</label>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="rightBox">
+                    <div class="formSectionOneRight">
+                        <img src="http://placeimg.com/500/400/any" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formSectionTwo">
+            <div class="formSectionTwoSub wrapper">
+                <div class="leftBox">
+                    <div class="formSectionTwoLeft">
+                        <img src="http://placeimg.com/500/400/any" alt="" />
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <div class="formSectionTwoRight">
+                        <form action="#" method="#" class="skincareForm" autocomplete="off" name="skincareForm">
+                            <h3>Skin Type</h3>
+                            <p>Helps us select products that are suited to your skin type.</p>
+
+                            <fieldset>
+
+                                <legend class="visuallyHidden">Select your skin type:</legend>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="skinType" value="normal" id="normalSkin" checked="true"/>
+                                    <label for="normalSkin" class="toggleLabel">Normal</label>
+                                </div>
+
+                                <div class="radioBox">               
+                                    <input type="radio" name="skinType" value="dry" id="drySkin" />
+                                    <label for="drySkin" class="toggleLabel">Dry</label>
+                                </div>
+
+                                <div class="radioBox">              
+                                    <input type="radio" name="skinType" value="oily" id="oilySkin" />
+                                    <label for="oilySkin" class="toggleLabel">Oily</label>
+                                </div>
+
+                                <div class="radioBox">            
+                                    <input type="radio" name="skinType" value="combo" id="comboSkin" />
+                                    <label for="comboSkin" class="toggleLabel">Combination</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formSectionThree">
+            <div class="formSectionThreeSub wrapper">
+                <div class="leftBox">
+                    <div class="formSectionThreeLeft">
+                        <form action="#" method="#" class="skincareForm" autocomplete="off" name="skincareForm">
+                            <h3>Sensitivity</h3>
+                            <p>
+                                Reduce inflammation and avoid adverse reactions, such as redness,
+                                dryness, peeling, and/or breakouts.
+                            </p>
+
+                            <fieldset>
+                                <legend class="visuallyHidden">Select your sensitivity:</legend>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="sensitivity" value="lowSen" id="lowSen" checked="true"/>
+                                    <label for="lowSen" class="toggleLabel">Low</label>
+                                </div>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="sensitivity" value="medSen" id="middleSen" />
+                                    <label for="middleSen" class="toggleLabel">Medium</label>
+                                </div>
+
+                                <div class="radioBox">
+                                    <input type="radio" name="sensitivity" value="highSen" id="highSen" />
+                                    <label for="highSen" class="toggleLabel">High</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="rightBox">
+                    <div class="formSectionThreeRight">
+                        <img src="http://placeimg.com/500/400/any" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formSectionFour">
+            <div class="formSectionFourSub wrapper">
+                <form action="#" method="#" class="skincareForm" autocomplete="off" name="skincareForm">
+                    <input type="submit" value="Submit" id="submitBox" class="submitBox" />
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="resultSection" id="resultSection">
+            <div class="resultSectionSub wrapper">
+                <h2 class="resultHeader">
+                    Let's find the skin care products that make sense for you.
+                </h2>
+
+                <ul class="resultList"></ul>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
