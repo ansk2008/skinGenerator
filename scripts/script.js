@@ -202,126 +202,291 @@ const pointSystem = {
     },
 
     highSen: {
-      oilCleanser: 0,
-      foamCleanser: -1,
-      gelCleanser: 2,
-      exfoliator: -3,
-      aha: -1,
-      bha: -2,
-      niacinamide: 1,
-      retinoid: -2,
-      vitaminC: -3,
-      hyaluronic: 0,
-      toner: 0,
-      essence: 1,
-      ampoule: 0,
-      eyeCream: 0,
-      sheetMask: 0,
-      moisturizer: 0,
-      spfLight: 0,
-      spfHeavy: 0,
-      nightMask: 0
+      oilCleanser: 1, //
+      foamCleanser: -1, //
+      gelCleanser: 2, //
+      exfoliator: -3, //
+      aha: -1, //
+      bha: -2, //
+      niacinamide: 1, //
+      retinoid: -2, //
+      vitaminC: -3, //
+      hyaluronic: 0, //
+      toner: 0, //
+      essence: 1, //
+      ampoule: 0, //
+      eyeCream: 0, //
+      sheetMask: 0, //
+      moisturizer: 0, //
+      spfLight: 0, //
+      spfHeavy: 0, //
+      nightMask: 0 //
     }
   }
 };
 
-const tools = {};
+let standaloneScore = [
+  {
+    category: "oilCleanser",
+    displayName: "Oil Cleanser",
+    order: 1,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "exfoliator",
+    displayName: "Physical Exfoliator",
+    order: 3,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "toner",
+    displayName: "Toner",
+    order: 4,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "essence",
+    displayName: "Essence",
+    order: 11,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "ampoule",
+    displayName: "Moisturizing Serum",
+    order: 12,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "eyeCream",
+    displayName: "Eye Cream",
+    order: 13,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "sheetMask",
+    displayName: "Sheet Mask",
+    order: 16,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "moisturizer",
+    displayName: "Moisturizer",
+    order: 14,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "nightMask",
+    displayName: "Night Mask",
+    order: 16,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  }
+];
+
+let activesScore = [
+  {
+    category: "aha",
+    displayName: "AHA",
+    order: 5,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "bha",
+    displayName: "BHA",
+    order: 6,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "niacinamide",
+    displayName: "Niacinamide",
+    order: 7,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "retinoid",
+    displayName: "Retinoid",
+    order: 8,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "vitaminC",
+    displayName: "Vitamin C",
+    order: 9,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "hyaluronic",
+    displayName: "Hyaluronic Acid",
+    order: 10,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  }
+];
+
+let cleanserScore = [
+  {
+    category: "foamCleanser",
+    displayName: "Foaming Cleanser",
+    order: 2,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "gelCleanser",
+    displayName: "Gel Cleanser",
+    order: 2,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  }
+];
+
+spfScore = [
+  {
+    category: "spfLight",
+    displayName: "SPF",
+    order: 15,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  },
+  {
+    category: "spfHeavy",
+    displayName: "SPF",
+    order: 15,
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+  }
+];
+
+skinApp = {};
+
+// button must be ".button"
+// section must be "#section"
+skinApp.scrollTool = (button, section) => {
+  $(button).on("click", function() {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(section).offset().top
+      },
+      300
+    );
+  });
+};
+
+// put score array in to calculate the scores based on the user answers
+skinApp.scoreCalculator = (
+  ageAnswer,
+  skinTypeAnswer,
+  sensitivityAnswer,
+  scoreArray
+) => {
+  for (i = 0; i < scoreArray.length; i++) {
+    let categoryName = scoreArray[i].category;
+
+    scoreArray[i].score =
+      pointSystem.age[ageAnswer][categoryName] +
+      pointSystem.skinType[skinTypeAnswer][categoryName] +
+      pointSystem.sensitivity[sensitivityAnswer][categoryName];
+  }
+};
+
+// put final results array in to add html to results section
+skinApp.resultIterator = finalResultArray => {
+  for (i = 0; i < finalResultArray.length; i++) {
+
+    if (i < 9) {
+      $(".resultList").append(
+        `<li><h4>0${i + 1}.</h5><div class="resultTextRight"><h5>${
+          finalResultArray[i].displayName
+        }</h5><p>${finalResultArray[i].description}</p></div></li>`
+      );
+    } else {
+      $(".resultList").append(
+        `<li><h4>${i + 1}.</h5><div class="resultTextRight"><h5>${
+          finalResultArray[i].displayName
+        }</h5><p>${finalResultArray[i].description}</p></div></li>`
+      );
+    }
+  }
+};
 
 $(document).ready(function() {
+  //smooth scrolling
+  skinApp.scrollTool(".labelSectionOne", "#formSectionTwo");
+  skinApp.scrollTool(".labelSectionTwo", "#formSectionThree");
+  skinApp.scrollTool(".labelSectionThree", "#formSectionFour");
+
+  $("form").on("reset", function(event) {
+    //remove html from results section
+    $(".resultHeader").html("");
+    $(".resultList").html("");
+    $(".buttonBox").html("");
+
+    //reset all arrays
+    // const standaloneFinal = [];
+    // const cleanserFinal = [];
+    // const activesFinal = [];
+    // const spfFinal = [];
+    // const fullRoutine = [];
+    // const fullRoutineSorted = [];
+
+    //push to the top
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#formSectionOne").offset().top
+      },
+      300
+    );
+  });
+
   $("form").on("submit", function(event) {
     // event.preventDefault prevents form submit button from refreshing page automatically
     event.preventDefault();
 
     // clears routine, if a previous one existed
-
     $(".resultHeader").html("");
     $(".resultList").html("");
+    $(".buttonBox").html("");
+
+    //declare/reset all arrays
+    // let standaloneFinal = [];
+    // let cleanserFinal = [];
+    // let sortedCleanser = [];
+    // let activesAboveZero = [];
+    // let sortedActives = [];
+    // let activesFinal = [];
+    // let sortedSpf = [];
+    // let spfFinal = [];
+    // let fullRoutine = [];
+    // let fullRoutineSorted = [];
 
     // Save the users age range and skin type choices as variables
     const userAge = $('input[name="age"]:checked').val();
     const userSkinType = $('input[name="skinType"]:checked').val();
     const userSensitivity = $('input[name="sensitivity"]:checked').val();
 
-    console.log(userSensitivity);
-
     // Create an array of final scores (for each category), and then tally scores based on answers
 
     // STANDALONE (COMPLETED)
 
-    standaloneScore = [
-      {
-        category: "Oil Cleanser",
-        score:
-          pointSystem.age[userAge].oilCleanser +
-          pointSystem.skinType[userSkinType].oilCleanser +
-          pointSystem.sensitivity[userSensitivity].oilCleanser,
-        order: 1
-      },
-      {
-        category: "Physical Exfoliator",
-        score:
-          pointSystem.age[userAge].exfoliator +
-          pointSystem.skinType[userSkinType].exfoliator +
-          pointSystem.sensitivity[userSensitivity].exfoliator,
-        order: 3
-      },
-      {
-        category: "Toner",
-        score:
-          pointSystem.age[userAge].toner +
-          pointSystem.skinType[userSkinType].toner +
-          pointSystem.sensitivity[userSensitivity].toner,
-        order: 4
-      },
-      {
-        category: "Essence",
-        score:
-          pointSystem.age[userAge].essence +
-          pointSystem.skinType[userSkinType].essence +
-          pointSystem.sensitivity[userSensitivity].essence,
-        order: 11
-      },
-      {
-        category: "Moisturizing Serum",
-        score:
-          pointSystem.age[userAge].ampoule +
-          pointSystem.skinType[userSkinType].ampoule +
-          pointSystem.sensitivity[userSensitivity].ampoule,
-        order: 12
-      },
-      {
-        category: "Eye Cream",
-        score:
-          pointSystem.age[userAge].eyeCream +
-          pointSystem.skinType[userSkinType].eyeCream +
-          pointSystem.sensitivity[userSensitivity].eyeCream,
-        order: 13
-      },
-      {
-        category: "Sheet Mask",
-        score:
-          pointSystem.age[userAge].sheetMask +
-          pointSystem.skinType[userSkinType].sheetMask +
-          pointSystem.sensitivity[userSensitivity].sheetMask,
-        order: 16
-      },
-      {
-        category: "Moisturizer",
-        score:
-          pointSystem.age[userAge].moisturizer +
-          pointSystem.skinType[userSkinType].moisturizer +
-          pointSystem.sensitivity[userSensitivity].moisturizer,
-        order: 14
-      },
-      {
-        category: "Night Mask",
-        score:
-          pointSystem.age[userAge].nightMask +
-          pointSystem.skinType[userSkinType].nightMask +
-          pointSystem.sensitivity[userSensitivity].nightMask,
-        order: 16
-      }
-    ];
+    skinApp.scoreCalculator(
+      userAge,
+      userSkinType,
+      userSensitivity,
+      standaloneScore
+    );
 
     // Create a new array for standalone with only values more than 0
 
@@ -329,26 +494,14 @@ $(document).ready(function() {
       return a.score > 0;
     });
 
-    // CLEANSERS (COMPLETE)
+    // CLEANSERS (COMPLETED)
 
-    cleanserScore = [
-      {
-        category: "Foam Cleanser",
-        score:
-          pointSystem.age[userAge].foamCleanser +
-          pointSystem.skinType[userSkinType].foamCleanser +
-          pointSystem.sensitivity[userSensitivity].foamCleanser,
-        order: 2
-      },
-      {
-        category: "Gel Cleanser",
-        score:
-          pointSystem.age[userAge].gelCleanser +
-          pointSystem.skinType[userSkinType].gelCleanser +
-          pointSystem.sensitivity[userSensitivity].gelCleanser,
-        order: 2
-      }
-    ];
+    skinApp.scoreCalculator(
+      userAge,
+      userSkinType,
+      userSensitivity,
+      cleanserScore
+    );
 
     // Create a new array for the cleanser with the larger score
 
@@ -356,128 +509,60 @@ $(document).ready(function() {
       return b.score - a.score;
     });
 
-    const cleanserFinal = sortedCleanser.shift();
+    console.log(sortedCleanser);
 
-    // console.log(cleanserFinal);
+    const cleanserFinal = sortedCleanser[0];
 
     // ACTIVES (COMPLETED)
 
-    activesScore = [
-      {
-        category: "AHA",
-        score:
-          pointSystem.age[userAge].aha +
-          pointSystem.skinType[userSkinType].aha +
-          pointSystem.sensitivity[userSensitivity].aha,
-        order: 5
-      },
-      {
-        category: "BHA",
-        score:
-          pointSystem.age[userAge].bha +
-          pointSystem.skinType[userSkinType].bha +
-          pointSystem.sensitivity[userSensitivity].bha,
-        order: 6
-      },
-      {
-        category: "Niacinamide",
-        score:
-          pointSystem.age[userAge].niacinamide +
-          pointSystem.skinType[userSkinType].niacinamide +
-          pointSystem.sensitivity[userSensitivity].niacinamide,
-        order: 7
-      },
-      {
-        category: "Retinoid",
-        score:
-          pointSystem.age[userAge].retinoid +
-          pointSystem.skinType[userSkinType].retinoid +
-          pointSystem.sensitivity[userSensitivity].retinoid,
-        order: 8
-      },
-      {
-        category: "Vitamin C",
-        score:
-          pointSystem.age[userAge].vitaminC +
-          pointSystem.skinType[userSkinType].vitaminC +
-          pointSystem.sensitivity[userSensitivity].vitaminC,
-        order: 9
-      },
-      {
-        category: "Hyaluronic Acid",
-        score:
-          pointSystem.age[userAge].hyaluronic +
-          pointSystem.skinType[userSkinType].hyaluronic +
-          pointSystem.sensitivity[userSensitivity].hyaluronic,
-        order: 10
-      }
-    ];
+    skinApp.scoreCalculator(
+      userAge,
+      userSkinType,
+      userSensitivity,
+      activesScore
+    );
 
+    // return all actives with a score greater than 0
     const activesAboveZero = activesScore.filter(function(a) {
       return a.score > 0;
     });
 
-    // console.log(activesAboveZero);
-
+    // sort actives from highest to lower
     const sortedActives = activesAboveZero.sort(function(a, b) {
       return b.score - a.score;
     });
 
-    // console.log(sortedActives);
+    console.log(sortedActives);
 
     let activesFinal = [];
 
+    // only use the 2 actives with the highest scores
     if (sortedActives.length > 2) {
       for (i = 0; i < 2; i++) {
-        activesFinal[i] = sortedActives.shift();
+        activesFinal[i] = sortedActives[i];
       }
     } else {
       activesFinal = sortedActives;
     }
 
-    // console.log(activesFinal);
+    console.log(activesFinal);
 
-    // SPF (COMPLETED)
+    // SPF (COMPLETE)
 
-    spfScore = [
-      {
-        category: "SPF",
-        score:
-          pointSystem.age[userAge].spfLight +
-          pointSystem.skinType[userSkinType].spfLight +
-          pointSystem.sensitivity[userSensitivity].spfLight,
-        order: 15
-      },
-      {
-        category: "SPF",
-        score:
-          pointSystem.age[userAge].spfHeavy +
-          pointSystem.skinType[userSkinType].spfHeavy +
-          pointSystem.sensitivity[userSensitivity].spfHeavy,
-        order: 15
-      }
-    ];
+    skinApp.scoreCalculator(userAge, userSkinType, userSensitivity, spfScore);
 
     // Pick the spf with the higher score
-
     const sortedSpf = spfScore.sort(function(a, b) {
       return b.score - a.score;
     });
 
-    // console.log(sortedSpf);
-
-    const spfFinal = sortedSpf.shift();
-
-    // console.log(spfFinal);
+    const spfFinal = sortedSpf[0];
 
     // MERGE ALL THE ARRAYS AND TO THEIR SCORE SO WE CAN SORT IN ORDER OF USE
 
-    fullRoutine = standaloneFinal.concat(cleanserFinal, activesFinal, spfFinal);
+    const fullRoutine = standaloneFinal.concat(cleanserFinal, activesFinal, spfFinal);
 
-    // console.log(fullRoutine);
-
-    // sort by order of use
-
+    // Sort by order of use
     const fullRoutineSorted = fullRoutine.sort(function(a, b) {
       return a.order - b.order;
     });
@@ -486,11 +571,13 @@ $(document).ready(function() {
 
     // TURN ROUTINE INTO HTML & PRINT ON THE SITE
 
-    $(".resultList").append(`<h2>Your Routine</h2>`);
+    $(".resultHeader").html(`Your Routine`);
 
-    for (i = 0; i < fullRoutineSorted.length; i++) {
-      $(".resultList").append(`<h3>${fullRoutineSorted[i].category}</h3>`);
-    }
+    skinApp.resultIterator(fullRoutineSorted);
+
+    $(".resultSectionSub").append(
+      `<div class="buttonBox"><label for="resetBox" class="visuallyHidden">Click here to reset your answers and start again.</label><input type="reset" value="Try Again?" id="resetBox" class="resetBox"/></div>`
+    );
 
     $([document.documentElement, document.body]).animate(
       {

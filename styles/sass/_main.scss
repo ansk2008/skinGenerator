@@ -1,3 +1,8 @@
+body {
+    background: $background;
+    border: 10px solid $secondary;
+}
+
 ul {
     padding-left: 0;
 }
@@ -14,7 +19,7 @@ ul {
 }
 
 .leftBox {
-    border-right: 1px solid black;
+    border-right: 1px solid $primary;
 }
 
 .formSectionOneLeft, .formSectionOneRight, .formSectionThreeLeft, .formSectionThreeRight {
@@ -27,11 +32,18 @@ ul {
 }
 
 .formSectionOneRight, .formSectionThreeRight {
-    background: linear-gradient(to right, white 30%, salmon 30%);
     img {
         position: relative;
         right: 6vw;
     }
+}
+
+.formSectionOneRight {
+    background: linear-gradient(to right, $background 30%, $secondary 30%);
+}
+
+.formSectionThreeRight {
+    background: linear-gradient(to right, $background 30%, $secondary 30%);
 }
 
 // SECTION TWO
@@ -46,7 +58,7 @@ ul {
 }
 
 .formSectionTwoLeft {
-    background: linear-gradient(to left, white 30%, salmon 30%);
+    background: linear-gradient(to left, $background 30%, $secondary 30%);
     img {
         position: relative;
         left: 6vw;
@@ -117,46 +129,93 @@ fieldset {
     left: 0;
     width: 100%;
     text-align: center;
-    background: white;
-    border: 1px solid black;
+    background: $background;
+    border: 1px solid $primary;
     z-index: -1;
 }
 
 /* Change the background color when the toggle is checked */
 [type="radio"]:checked + .toggleLabel::before {
-    background: black;
+    background: $primary;
 }
 
 [type="radio"]:checked + .toggleLabel {
-    color: white;
+    color: $background;
 }
 
 // Hover state for unchecked
 
 [type="radio"]:hover + .toggleLabel::before {
-    background: black;
+    background: $primary;
 }
 
 [type="radio"]:hover + .toggleLabel {
-    color: white;
+    color: $background;
 }
 
 [type=submit] {
     text-align: center;
     width: 180px;
-    background: white;
-    color: black;
-    border: 1px solid black;
+    background: $background;
+    color: $primary;
+    border: 1px solid $primary;
     padding: 15px 0 2px 0;
 }
 
 [type=submit]:hover {
-    background: black;
-    color: white;
+    background: $primary;
+    color: $background;
 }
 
+// RESULT SECTION
 
+.resultSection {
+  padding-bottom: 4vw;
 
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.resultSectionSub {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultList {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    width: 50%;
+    display: flex;
+
+    h4 {
+      flex: 1 0 30%;
+    }
+
+    .resultTextRight {
+      flex: 1 0 70%;
+    }
+  }
+}
+
+.buttonBox {
+  align-self: center;
+}
+
+input[type=reset] {
+  text-align: center;
+  color: $primary;
+  background: $background;
+  border: none;
+  padding: 0;
+}
+
+input[type=reset]:hover {
+    color: $secondary;
+}
 
 
 

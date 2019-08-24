@@ -292,7 +292,8 @@ img {
 }
 
 html {
-  font-family: 'Ramaraja', serif;
+  font-family: "Ramaraja", serif;
+  color: #231e1f;
 }
 
 h1 {
@@ -301,22 +302,35 @@ h1 {
   line-height: 0.7;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 h3 {
   font-size: 2rem;
   margin: 0;
 }
 
-h2 {
-  font-size: 2rem;
+h4 {
+  font-size: 5rem;
+  margin: 0;
+  color: #f5f5f3;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-[type=submit] {
-  font-family: 'Ramaraja', serif;
+h5 {
+  padding-top: 10px;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+input[type=submit], input[type=reset] {
+  font-family: "Ramaraja", serif;
   font-size: 2rem;
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
 }
@@ -335,6 +349,11 @@ header p {
   text-align: center;
 }
 
+body {
+  background: #f5f5f3;
+  border: 10px solid #f75f6f;
+}
+
 ul {
   padding-left: 0;
 }
@@ -351,7 +370,7 @@ ul {
 }
 
 .leftBox {
-  border-right: 1px solid black;
+  border-right: 1px solid #231e1f;
 }
 
 .formSectionOneLeft, .formSectionOneRight, .formSectionThreeLeft, .formSectionThreeRight {
@@ -363,14 +382,19 @@ ul {
   padding-right: 13vw;
 }
 
-.formSectionOneRight, .formSectionThreeRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, white), color-stop(30%, salmon));
-  background: linear-gradient(to right, white 30%, salmon 30%);
-}
-
 .formSectionOneRight img, .formSectionThreeRight img {
   position: relative;
   right: 6vw;
+}
+
+.formSectionOneRight {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f5f5f3), color-stop(30%, #f75f6f));
+  background: linear-gradient(to right, #f5f5f3 30%, #f75f6f 30%);
+}
+
+.formSectionThreeRight {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f5f5f3), color-stop(30%, #f75f6f));
+  background: linear-gradient(to right, #f5f5f3 30%, #f75f6f 30%);
 }
 
 .formSectionTwoLeft, .formSectionTwoRight {
@@ -383,8 +407,8 @@ ul {
 }
 
 .formSectionTwoLeft {
-  background: -webkit-gradient(linear, right top, left top, color-stop(30%, white), color-stop(30%, salmon));
-  background: linear-gradient(to left, white 30%, salmon 30%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #f5f5f3), color-stop(30%, #f75f6f));
+  background: linear-gradient(to left, #f5f5f3 30%, #f75f6f 30%);
 }
 
 .formSectionTwoLeft img {
@@ -466,46 +490,102 @@ fieldset {
   left: 0;
   width: 100%;
   text-align: center;
-  background: white;
-  border: 1px solid black;
+  background: #f5f5f3;
+  border: 1px solid #231e1f;
   z-index: -1;
 }
 
 /* Change the background color when the toggle is checked */
 [type="radio"]:checked + .toggleLabel::before {
-  background: black;
+  background: #231e1f;
 }
 
 [type="radio"]:checked + .toggleLabel {
-  color: white;
+  color: #f5f5f3;
 }
 
 [type="radio"]:hover + .toggleLabel::before {
-  background: black;
+  background: #231e1f;
 }
 
 [type="radio"]:hover + .toggleLabel {
-  color: white;
+  color: #f5f5f3;
 }
 
 [type=submit] {
   text-align: center;
   width: 180px;
-  background: white;
-  color: black;
-  border: 1px solid black;
+  background: #f5f5f3;
+  color: #231e1f;
+  border: 1px solid #231e1f;
   padding: 15px 0 2px 0;
 }
 
 [type=submit]:hover {
-  background: black;
-  color: white;
+  background: #231e1f;
+  color: #f5f5f3;
 }
 
-footer {
+.resultSection {
   padding-bottom: 4vw;
 }
 
-footer h2 {
+.resultSection h2 {
   text-align: center;
+  width: 100%;
+}
+
+.resultSectionSub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resultList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.resultList li {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resultList li h4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+}
+
+.resultList li .resultTextRight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 70%;
+          flex: 1 0 70%;
+}
+
+.buttonBox {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+input[type=reset] {
+  text-align: center;
+  color: #231e1f;
+  background: #f5f5f3;
+  border: none;
+  padding: 0;
+}
+
+input[type=reset]:hover {
+  color: #f75f6f;
 }

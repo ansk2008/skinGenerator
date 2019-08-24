@@ -1,34 +1,56 @@
 // font-family: 'Ramaraja', serif;
 // font-family: 'Raleway', sans-serif;
 
+// Add an outline to any font used.
+// color: white;
+// text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+$background: #f5f5f3;
+$primary: #231e1f;
+$secondary: #f75f6f;
+
 html {
-    font-family: 'Ramaraja', serif;
+  font-family: "Ramaraja", serif;
+  color: $primary;
 }
 
 h1 {
-    font-size: 7rem;
-    text-align: center;
-    line-height: 0.7;
-}
-
-h3 {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 7rem;
+  text-align: center;
+  line-height: 0.7;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-[type=submit] {
-    font-family: 'Ramaraja', serif;
-    font-size: 2rem;
+h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h4 {
+    font-size: 5rem;
+    margin: 0;
+    color: $background;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h5 {
+    padding-top: 10px;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+input[type=submit], input[type=reset] {
+  font-family: "Ramaraja", serif;
+  font-size: 2rem;
 }
 
 p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.8rem;
-    line-height: 1.6;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
 
