@@ -5,17 +5,11 @@
 // color: white;
 // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
-// OPTION ONE
+// COLORS
 
-// $background: #f5f5f3;
-// $primary: #231e1f;
-// $secondary: #f75f6f;
-
-// OPTION TWO
-
-$background: #31ffd1;
-$primary: #000604;
-$secondary: #3500c6;
+$background: #a0d0f8;
+$primary: #000003;
+$secondary: #ea5c5a;
 
 html {
   font-family: "Ramaraja", serif;
@@ -60,21 +54,36 @@ input[type="reset"] {
   font-size: 2rem;
 }
 
+a {
+  text-decoration: none;
+  color: $secondary;
+  &:visited {
+    color: $secondary;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $primary;
+  }
+}
+
 p {
   font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
-}
 
-a {
-    text-decoration: none;
-    color: $secondary;
-    &:visited { 
-        color: $secondary;
+  a {
+    font-weight: 600;
+    color: $primary;
+    &:visited {
+      color: $primary;
     }
-    &:hover, &:active, &:focus { 
-        color: $primary;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $secondary;
     }
+  }
 }
 
 @media (max-width: 800px) {

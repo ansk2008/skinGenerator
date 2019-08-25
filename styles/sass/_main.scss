@@ -92,8 +92,8 @@ ul {
 }
 
 h2.submitHeadline {
-    margin: 0;
-    padding: 6vw 0;
+  margin: 0;
+  padding: 6vw 0;
 }
 
 // FORMS
@@ -104,7 +104,6 @@ fieldset {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-top: 20px;
 }
 
@@ -112,6 +111,7 @@ fieldset {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0 auto 20px auto;
   margin-bottom: 20px;
   width: 140px;
 }
@@ -187,7 +187,7 @@ fieldset {
 // RESULT SECTION
 
 .resultSection {
-    padding: 0 0 6vw 0;
+  padding: 0 0 6vw 0;
 
   h4.resultHeadline {
     text-align: center;
@@ -206,7 +206,7 @@ fieldset {
   flex-wrap: wrap;
 
   li {
-    width: 50%;
+    width: calc(50% - 1.5%);
     display: flex;
 
     h4 {
@@ -216,6 +216,10 @@ fieldset {
     .resultTextRight {
       flex: 1 0 70%;
     }
+  }
+
+  li:nth-child(even) {
+    margin-left: 3%;
   }
 }
 
@@ -250,6 +254,10 @@ input[type="reset"]:hover {
       .resultTextRight {
         width: 1 0 90%;
       }
+    }
+
+    li:nth-child(even) {
+      margin-left: 0;
     }
   }
 }
@@ -295,24 +303,24 @@ input[type="reset"]:hover {
     border: none;
   }
 
-  .formSectionOneRight, .formSectionTwoLeft, .formSectionThreeRight {
+  .formSectionOneRight,
+  .formSectionTwoLeft,
+  .formSectionThreeRight {
     img {
-        width: calc(100% - 6vw);
+      width: calc(100% - 6vw);
     }
   }
 
-  .formSectionOneRight, .formSectionThreeRight {
+  .formSectionOneRight,
+  .formSectionThreeRight {
     img {
-        position: static;
+      position: static;
     }
   }
-    
 }
 
 @media (max-width: 535px) {
-    .formSectionFourSub {
-        padding-bottom: 15vw;
-    }
+  .formSectionFourSub {
+    padding-bottom: 15vw;
+  }
 }
-
-
