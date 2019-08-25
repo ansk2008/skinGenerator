@@ -1,7 +1,6 @@
 header {
-    // height: 40vw;
-    // min-height: 80vh;
     padding: 35vh 0 12vh 0;
+    position: relative;
 }
 
 h1 {
@@ -12,4 +11,71 @@ h1 {
 header p {
     margin: 20vh 0 0 0;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: $secondary;
+    &:visited { 
+        color: $secondary;
+    }
+    &:hover, &:active, &:focus { 
+        color: $primary;
+    }
+}
+
+
+div.square {
+    position: absolute;
+    background-color: $background;
+    border: 10px solid $secondary;
+    width: 100px;
+    height: 100px;
+    top: 6%;
+    left: 8%;
+    z-index: -100;
+}
+
+div.circle {
+    position: absolute;
+    background-color: $secondary;
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    right: 8%;
+    border-radius: 50%;
+    z-index: -100;
+}
+
+.fa-angle-down {
+    text-align: center;
+    font-size: 3rem;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    
+    header {
+        padding-bottom: 9vh;
+
+        p {
+            margin: 6vh 0 19vh 0;
+        }
+
+        div.square {
+            width: 60px;
+            height: 60px;
+        }
+
+        div.circle {
+            bottom: 22%;
+            width: 65px;
+            height: 65px;
+        }
+    }
+
+    .fa-angle-down {
+        display: block;
+    }
+    
 }

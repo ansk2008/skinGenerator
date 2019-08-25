@@ -423,24 +423,22 @@ skinApp.resultIterator = finalResultArray => {
 };
 
 $(document).ready(function() {
-  //smooth scrolling
+  //smooth scrolling'
+  skinApp.scrollTool(".labelHeader", "#formSectionOne");
   skinApp.scrollTool(".labelSectionOne", "#formSectionTwo");
   skinApp.scrollTool(".labelSectionTwo", "#formSectionThree");
   skinApp.scrollTool(".labelSectionThree", "#formSectionFour");
 
   $("form").on("reset", function(event) {
     //remove html from results section
-    $(".resultHeader").html("");
-    $(".resultList").html("");
-    $(".buttonBox").html("");
+      
+    $(".resultSectionSub").html(
+      `<h4 class="resultHeadline"></h4><ul class="resultList"></ul><div class="buttonBox"></div>`
+    );
 
-    //reset all arrays
-    // const standaloneFinal = [];
-    // const cleanserFinal = [];
-    // const activesFinal = [];
-    // const spfFinal = [];
-    // const fullRoutine = [];
-    // const fullRoutineSorted = [];
+    $(".formSectionFourSub").html(
+      `<label for="submitBox" class="visuallyHidden">Click here to submit your answers.</label><input type="submit" value="Submit" id="submitBox" class="submitBox"/><h2 class="submitHeadline">Let's find the skin care products that make sense for you.</h2>`
+    );
 
     //push to the top
     $([document.documentElement, document.body]).animate(
@@ -456,21 +454,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     // clears routine, if a previous one existed
-    $(".resultHeader").html("");
+    // $(".submitHeadline").html("");
+    $(".resultHeadline").html("");
     $(".resultList").html("");
     $(".buttonBox").html("");
-
-    //declare/reset all arrays
-    // let standaloneFinal = [];
-    // let cleanserFinal = [];
-    // let sortedCleanser = [];
-    // let activesAboveZero = [];
-    // let sortedActives = [];
-    // let activesFinal = [];
-    // let sortedSpf = [];
-    // let spfFinal = [];
-    // let fullRoutine = [];
-    // let fullRoutineSorted = [];
 
     // Save the users age range and skin type choices as variables
     const userAge = $('input[name="age"]:checked').val();
@@ -509,8 +496,6 @@ $(document).ready(function() {
       return b.score - a.score;
     });
 
-    console.log(sortedCleanser);
-
     const cleanserFinal = sortedCleanser[0];
 
     // ACTIVES (COMPLETED)
@@ -532,8 +517,6 @@ $(document).ready(function() {
       return b.score - a.score;
     });
 
-    console.log(sortedActives);
-
     let activesFinal = [];
 
     // only use the 2 actives with the highest scores
@@ -544,8 +527,6 @@ $(document).ready(function() {
     } else {
       activesFinal = sortedActives;
     }
-
-    console.log(activesFinal);
 
     // SPF (COMPLETE)
 
@@ -571,12 +552,12 @@ $(document).ready(function() {
 
     // TURN ROUTINE INTO HTML & PRINT ON THE SITE
 
-    $(".resultHeader").html(`Your Routine`);
+    $(".resultHeadline").html(`Your Routine`);
 
     skinApp.resultIterator(fullRoutineSorted);
 
-    $(".resultSectionSub").append(
-      `<div class="buttonBox"><label for="resetBox" class="visuallyHidden">Click here to reset your answers and start again.</label><input type="reset" value="Try Again?" id="resetBox" class="resetBox"/></div>`
+    $(".buttonBox").html(
+      `<label for="resetBox" class="visuallyHidden">Click here to reset your answers and start again.</label><input type="reset" value="Try Again?" id="resetBox" class="resetBox"/>`
     );
 
     $([document.documentElement, document.body]).animate(

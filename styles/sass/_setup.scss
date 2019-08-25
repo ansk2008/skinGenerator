@@ -247,3 +247,19 @@ img {
 
   // border: 1px solid red;
 }
+
+@media (max-width: 970px) {
+    .headerWrapper {
+        width: 80%;
+    }    
+}
+
+@media (max-width: 535px) {
+  .headerWrapper {
+        width: 90%;
+    }  
+
+  .wrapper {
+    width: 90%;
+  }
+}

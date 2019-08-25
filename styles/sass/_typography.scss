@@ -5,9 +5,19 @@
 // color: white;
 // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
-$background: #f5f5f3;
-$primary: #231e1f;
-$secondary: #f75f6f;
+// OPTION ONE
+
+// $background: #f5f5f3;
+// $primary: #231e1f;
+// $secondary: #f75f6f;
+
+// OPTION TWO
+
+$background: #31ffd1;
+$primary: #000604;
+$secondary: #3500c6;
+// $tertiary: #094074;
+// $quaternary: #3c6997;
 
 html {
   font-family: "Ramaraja", serif;
@@ -15,13 +25,15 @@ html {
 }
 
 h1 {
-  font-size: 7rem;
+  color: $secondary;
+  font-size: 7rem;  
   text-align: center;
   line-height: 0.7;
 }
 
 h2 {
   font-size: 2.5rem;
+  text-align: center;
 }
 
 h3 {
@@ -30,19 +42,22 @@ h3 {
 }
 
 h4 {
-    font-size: 5rem;
-    margin: 0;
-    color: $background;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 5rem;
+  margin: 0;
+  color: $background;
+  min-width: 130px;
+  text-shadow: -1px -1px 0 $primary, 1px -1px 0 $primary, -1px 1px 0 $primary,
+    1px 1px 0 $primary;
 }
 
 h5 {
-    padding-top: 10px;
-    font-size: 1.6rem;
-    margin: 0;
+  padding-top: 10px;
+  font-size: 1.6rem;
+  margin: 0;
 }
 
-input[type=submit], input[type=reset] {
+input[type="submit"],
+input[type="reset"] {
   font-family: "Ramaraja", serif;
   font-size: 2rem;
 }
@@ -51,6 +66,39 @@ p {
   font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 5rem; 
+    }
+
+    h4 {
+        font-size: 4rem;
+        min-width: 105px;
+    }
+     
+}
+
+@media (max-width: 535px) {
+    h1 {
+        font-size: 4rem; 
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    h1 {
+        font-size: 3rem; 
+    }
+
+    h4 {
+        font-size: 3rem;
+        min-width: 80px;
+    }
 }
 
 
