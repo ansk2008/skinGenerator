@@ -13,18 +13,6 @@ header p {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: $secondary;
-    &:visited { 
-        color: $secondary;
-    }
-    &:hover, &:active, &:focus { 
-        color: $primary;
-    }
-}
-
-
 div.square {
     position: absolute;
     background-color: $background;

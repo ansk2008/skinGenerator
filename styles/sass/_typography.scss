@@ -16,8 +16,6 @@
 $background: #31ffd1;
 $primary: #000604;
 $secondary: #3500c6;
-// $tertiary: #094074;
-// $quaternary: #3c6997;
 
 html {
   font-family: "Ramaraja", serif;
@@ -26,7 +24,7 @@ html {
 
 h1 {
   color: $secondary;
-  font-size: 7rem;  
+  font-size: 7rem;
   text-align: center;
   line-height: 0.7;
 }
@@ -68,37 +66,45 @@ p {
   line-height: 1.6;
 }
 
-@media (max-width: 800px) {
-    h1 {
-        font-size: 5rem; 
+a {
+    text-decoration: none;
+    color: $secondary;
+    &:visited { 
+        color: $secondary;
     }
+    &:hover, &:active, &:focus { 
+        color: $primary;
+    }
+}
 
-    h4 {
-        font-size: 4rem;
-        min-width: 105px;
-    }
-     
+@media (max-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h4 {
+    font-size: 4rem;
+    min-width: 105px;
+  }
 }
 
 @media (max-width: 535px) {
-    h1 {
-        font-size: 4rem; 
-    }
+  h1 {
+    font-size: 4rem;
+  }
 
-    h2 {
-        font-size: 2rem;
-    }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 390px) {
-    h1 {
-        font-size: 3rem; 
-    }
+  h1 {
+    font-size: 3rem;
+  }
 
-    h4 {
-        font-size: 3rem;
-        min-width: 80px;
-    }
+  h4 {
+    font-size: 3rem;
+    min-width: 80px;
+  }
 }
-
-

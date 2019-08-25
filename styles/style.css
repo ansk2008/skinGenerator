@@ -354,6 +354,19 @@ p {
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: #3500c6;
+}
+
+a:visited {
+  color: #3500c6;
+}
+
+a:hover, a:active, a:focus {
+  color: #000604;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 5rem;
@@ -396,19 +409,6 @@ h1 {
 header p {
   margin: 20vh 0 0 0;
   text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #3500c6;
-}
-
-a:visited {
-  color: #3500c6;
-}
-
-a:hover, a:active, a:focus {
-  color: #000604;
 }
 
 div.square {

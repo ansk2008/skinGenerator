@@ -17,8 +17,7 @@ const pointSystem = {
       eyeCream: 1,
       sheetMask: 0,
       moisturizer: 1,
-      spfLight: 1,
-      spfHeavy: 0,
+      spf: 2,
       nightMask: 0
     },
 
@@ -39,8 +38,7 @@ const pointSystem = {
       eyeCream: 1,
       sheetMask: 1,
       moisturizer: 1,
-      spfLight: 0,
-      spfHeavy: 1,
+      spf: 2,
       nightMask: 0
     },
 
@@ -61,8 +59,7 @@ const pointSystem = {
       eyeCream: 1,
       sheetMask: 1,
       moisturizer: 1,
-      spfLight: 0,
-      spfHeavy: 1,
+      spf: 2,
       nightMask: 0
     }
   },
@@ -85,8 +82,7 @@ const pointSystem = {
       eyeCream: 1,
       sheetMask: 0,
       moisturizer: 1,
-      spfLight: 0,
-      spfHeavy: 2,
+      spf: 0,
       nightMask: 1
     },
 
@@ -107,8 +103,7 @@ const pointSystem = {
       eyeCream: 0,
       sheetMask: 0,
       moisturizer: 0,
-      spfLight: 1,
-      spfHeavy: 0,
+      spf: 1,
       nightMask: 0
     },
 
@@ -129,8 +124,7 @@ const pointSystem = {
       eyeCream: 0,
       sheetMask: 0,
       moisturizer: 0,
-      spfLight: 1,
-      spfHeavy: 0,
+      spf: 1,
       nightMask: 0
     },
 
@@ -151,8 +145,7 @@ const pointSystem = {
       eyeCream: 0,
       sheetMask: 0,
       moisturizer: 0,
-      spfLight: 1,
-      spfHeavy: 0,
+      spf: 1,
       nightMask: 0
     }
   },
@@ -174,8 +167,7 @@ const pointSystem = {
       eyeCream: 0,
       sheetMask: 0,
       moisturizer: 0,
-      spfLight: 0,
-      spfHeavy: 0,
+      spf: 0,
       nightMask: 0
     },
 
@@ -184,10 +176,10 @@ const pointSystem = {
       foamCleanser: 0,
       gelCleanser: 1,
       exfoliator: -2,
-      aha: 0,
+      aha: -1,
       bha: -1,
       niacinamide: 0,
-      retinoid: -1,
+      retinoid: 0,
       vitaminC: -2,
       hyaluronic: 0,
       toner: 0,
@@ -196,8 +188,7 @@ const pointSystem = {
       eyeCream: 0,
       sheetMask: 0,
       moisturizer: 0,
-      spfLight: 0,
-      spfHeavy: 0,
+      spf: 0,
       nightMask: 0
     },
 
@@ -206,10 +197,10 @@ const pointSystem = {
       foamCleanser: -1, //
       gelCleanser: 2, //
       exfoliator: -3, //
-      aha: -1, //
+      aha: -2, //
       bha: -2, //
       niacinamide: 1, //
-      retinoid: -2, //
+      retinoid: -1, //
       vitaminC: -3, //
       hyaluronic: 0, //
       toner: 0, //
@@ -218,9 +209,8 @@ const pointSystem = {
       eyeCream: 0, //
       sheetMask: 0, //
       moisturizer: 0, //
-      spfLight: 0, //
-      spfHeavy: 0, //
-      nightMask: 0 //
+      spf: 0, //
+      nightMask: -1 //
     }
   }
 };
@@ -231,63 +221,98 @@ let standaloneScore = [
     displayName: "Oil Cleanser",
     order: 1,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "The first step of the double cleanse process. An oil cleanser prevents breakouts and excess oil by removing oil-based impurities such as sebum, SPF, and pollutants.",
+    productReco: "Beauty Of Joseon Radiance Cleansing Balm",
+    link:
+      "https://www.yesstyle.com/en/beauty-of-joseon-cleansing-balm-80g-80g/info.html/pid.1065078966"
   },
   {
     category: "exfoliator",
     displayName: "Physical Exfoliator",
     order: 3,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Make use of small grains or non-smooth textures to removes dead skin cells and impurities. Can be irritating for those with sensitive skin.",
+    productReco: "Dr. G Brightening Peeling Gel",
+    link:
+      "https://www.amazon.ca/Dr-G-Brightening-Peeling-Gel-Ounce/dp/B007TFW0B6"
   },
   {
     category: "toner",
     displayName: "Toner",
     order: 4,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Used immediately after cleansing, a toner is used to re-balance your skin’s pH, hydrate, and remove any remaining impurities.",
+    productReco: "Acwell Licorice pH Balancing Cleansing Toner",
+    link:
+      "https://www.mikaela-beauty.com/products/acwell-licorice-ph-balancing-cleansing-toner"
   },
   {
     category: "essence",
     displayName: "Essence",
     order: 11,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "A watery lotion (or very thin gel) packed with concentrated moisturizing, anti-aging, and complexion-evening ingredients.",
+    productReco: "Missha Time Revolution",
+    link:
+      "https://sokoglam.com/products/missha-time-revolution-first-treatment-essence-intensive-moist"
   },
   {
     category: "ampoule",
     displayName: "Moisturizing Serum",
     order: 12,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Contains a higher concentration of active ingredients to help target a skin concern, in this case moisture levels.",
+    productReco: "Pyunkang Yul Moisture Ampoule",
+    link:
+      "https://www.mikaela-beauty.com/products/pyunkang-yul-moisture-ampoule"
   },
   {
     category: "eyeCream",
     displayName: "Eye Cream",
     order: 13,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Fight fine lines around your eyes, and brighten their appearance over time. A must have for people of all ages.",
+    productReco: "Benton Fermentation Eye Cream",
+    link:
+      "https://www.mikaela-beauty.com/products/benton-fermentation-eye-cream"
   },
   {
     category: "sheetMask",
     displayName: "Sheet Mask",
     order: 16,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "One of the easiest ways to attain that glowing, dewy look. Sheet masks combine several active ingredients to provide a deep treatment for all types of skin concerns.",
+    productReco: "A'PIEU Daily Sheet Mask with Green Tea",
+    link: "https://sokoglam.com/products/apieu-daily-sheet-mask-green-tea"
   },
   {
     category: "moisturizer",
     displayName: "Moisturizer",
     order: 14,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Essential to maintaining your skin's natural moisture barrier and keeping your complexion supple, clear, and glowing.",
+    productReco: "CosRX Advanced Snail 92 All in one Cream",
+    link: "https://www.amazon.ca/Cosrx-advanced-snail-cream-100ml/dp/B01LEJ5MSK"
   },
   {
     category: "nightMask",
-    displayName: "Night Mask",
+    displayName: "Sleeping Mask",
     order: 16,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Rejuvenate skin while you sleep so you wake up with a glowing, healthy complexion. Ideal for those with dry skin.",
+    productReco: "Laneige Water Sleeping Mask",
+    link:
+      "https://www.amazon.ca/Laneige-Water-Sleeping-Ounce-U-SC-3829/dp/B00Y16CXS6"
+  },
+  {
+    category: "spf",
+    displayName: "SPF",
+    order: 15,
+    description:
+      "Arguably the most important step for anti-aging, not to mention preventing skin cancer.",
+    productReco: "Dr. G Brightening Peeling Gel",
+    link:
+      "https://www.amazon.ca/Dr-G-Brightening-Peeling-Gel-Ounce/dp/B007TFW0B6"
   }
 ];
 
@@ -297,42 +322,58 @@ let activesScore = [
     displayName: "AHA",
     order: 5,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Works to break down the top layer that holds dead skin cells together, smoothing and refining the outermost layer of skin.",
+    productReco: "The Ordinary Glycolic Acid 7% Toning Solution",
+    link:
+      "https://theordinary.com/product/rdn-glycolic-acid-7pct-toning-solution-240ml"
   },
   {
     category: "bha",
     displayName: "BHA",
     order: 6,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Works at a deeper level on the skin, getting further into the pores and attracting oil. Best applied after cleansing with a 20 mins waiting period until your next step.",
+    productReco: "The Ordinary Salicylic Acid 2% Solution",
+    link:
+      "https://theordinary.com/product/rdn-salicylic-acid-2pct-solution-30ml"
   },
   {
     category: "niacinamide",
     displayName: "Niacinamide",
     order: 7,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Reduces the appearance of skin blemishes, balances visible sebum activity, and brightens skin tone.",
+    productReco: "The Ordinary Niacinamide 10% + Zinc 1%",
+    link: "https://theordinary.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml"
   },
   {
     category: "retinoid",
-    displayName: "Retinoid",
+    displayName: "Granactive Retinoid",
     order: 8,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "Effective against multiple signs of aging without any of the irritation and drawbacks common with retinol. ",
+    productReco: "Granactive Retinoid 2% in Squalane",
+    link:
+      "https://theordinary.com/product/rdn-granactive-retinoid-2pct-in-squalane-30ml"
   },
   {
     category: "vitaminC",
-    displayName: "Vitamin C",
+    displayName: "Ascorbic Acid",
     order: 9,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "An effective antioxidant that brightens the skin tone and reduces signs of aging.",
+    productReco: "Ascorbic Acid 8% + Alpha Arbutin 2%",
+    link:
+      "https://theordinary.com/product/rdn-ascorbic-acid-8pct-alpha-arbutin-2pct-30ml"
   },
   {
     category: "hyaluronic",
     displayName: "Hyaluronic Acid",
     order: 10,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "A substance found naturally in our skin that holds water and helps keep it hydrated and plump.",
+    productReco: "Hyaluronic Acid 2% + B5",
+    link: "https://theordinary.com/product/rdn-hyaluronic-acid-2pct-b5-30ml"
   }
 ];
 
@@ -342,31 +383,19 @@ let cleanserScore = [
     displayName: "Foaming Cleanser",
     order: 2,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "A daily cleanser that excels with water-based debris such as sweat and dirt.",
+    productReco: "Neogen Green Tea Real Fresh Foam Cleanser",
+    link: "https://sokoglam.com/products/neogen-real-fresh-foaming-cleanser"
   },
   {
     category: "gelCleanser",
     displayName: "Gel Cleanser",
     order: 2,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
-  }
-];
-
-spfScore = [
-  {
-    category: "spfLight",
-    displayName: "SPF",
-    order: 15,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
-  },
-  {
-    category: "spfHeavy",
-    displayName: "SPF",
-    order: 15,
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis deserunt ad doloribus porro, molestiae exercitationem!"
+      "A gentler daily cleanser that doesn’t strip your skin of its natural oils, especially for sensitive and dry skin.",
+    productReco: "CosRX Good Morning Gel Cleanser",
+    link:
+      "https://www.amazon.ca/Cosrx-good-morning-cleanser-150ml/dp/B016NRXO06"
   }
 ];
 
@@ -405,33 +434,43 @@ skinApp.scoreCalculator = (
 // put final results array in to add html to results section
 skinApp.resultIterator = finalResultArray => {
   for (i = 0; i < finalResultArray.length; i++) {
-
     if (i < 9) {
       $(".resultList").append(
         `<li><h4>0${i + 1}.</h5><div class="resultTextRight"><h5>${
           finalResultArray[i].displayName
-        }</h5><p>${finalResultArray[i].description}</p></div></li>`
+        }</h5><p>${
+          finalResultArray[i].description
+        }</p><p><span>Recommended: </span><a target="_blank" href="${
+          finalResultArray[i].link
+        }">${finalResultArray[i].productReco}</a></p></div></li>`
       );
     } else {
       $(".resultList").append(
         `<li><h4>${i + 1}.</h5><div class="resultTextRight"><h5>${
           finalResultArray[i].displayName
-        }</h5><p>${finalResultArray[i].description}</p></div></li>`
+        }</h5><p>${
+          finalResultArray[i].description
+        }</p><p><span>Recommended: </span><a target="_blank" href="${
+          finalResultArray[i].link
+        }">${finalResultArray[i].productReco}</a></p></div></li>`
       );
     }
   }
 };
 
-$(document).ready(function() {
-  //smooth scrolling'
-  skinApp.scrollTool(".labelHeader", "#formSectionOne");
-  skinApp.scrollTool(".labelSectionOne", "#formSectionTwo");
-  skinApp.scrollTool(".labelSectionTwo", "#formSectionThree");
-  skinApp.scrollTool(".labelSectionThree", "#formSectionFour");
+{
+  /* <p>
+  <span>Recommended:</span>{" "}
+  <a href="${finalResultArray[i].link}">
+    ${finalResultArray[i].productReco}
+  </a>
+</p>; */
+}
 
+skinApp.formReset = () => {
   $("form").on("reset", function(event) {
     //remove html from results section
-      
+
     $(".resultSectionSub").html(
       `<h4 class="resultHeadline"></h4><ul class="resultList"></ul><div class="buttonBox"></div>`
     );
@@ -448,7 +487,9 @@ $(document).ready(function() {
       300
     );
   });
+};
 
+skinApp.formSubmit = () => {
   $("form").on("submit", function(event) {
     // event.preventDefault prevents form submit button from refreshing page automatically
     event.preventDefault();
@@ -490,13 +531,11 @@ $(document).ready(function() {
       cleanserScore
     );
 
-    // Create a new array for the cleanser with the larger score
+    // Create a new array for the cleanser with the larger score and select the first element
 
-    const sortedCleanser = cleanserScore.sort(function(a, b) {
+    const cleanserFinal = cleanserScore.sort(function(a, b) {
       return b.score - a.score;
-    });
-
-    const cleanserFinal = sortedCleanser[0];
+    })[0];
 
     // ACTIVES (COMPLETED)
 
@@ -507,15 +546,13 @@ $(document).ready(function() {
       activesScore
     );
 
-    // return all actives with a score greater than 0
-    const activesAboveZero = activesScore.filter(function(a) {
-      return a.score > 0;
-    });
-
-    // sort actives from highest to lower
-    const sortedActives = activesAboveZero.sort(function(a, b) {
-      return b.score - a.score;
-    });
+    const sortedActives = activesScore
+      .filter(function(a) {
+        return a.score > 0;
+      })
+      .sort(function(a, b) {
+        return b.score - a.score;
+      });
 
     let activesFinal = [];
 
@@ -528,27 +565,11 @@ $(document).ready(function() {
       activesFinal = sortedActives;
     }
 
-    // SPF (COMPLETE)
-
-    skinApp.scoreCalculator(userAge, userSkinType, userSensitivity, spfScore);
-
-    // Pick the spf with the higher score
-    const sortedSpf = spfScore.sort(function(a, b) {
-      return b.score - a.score;
-    });
-
-    const spfFinal = sortedSpf[0];
-
-    // MERGE ALL THE ARRAYS AND TO THEIR SCORE SO WE CAN SORT IN ORDER OF USE
-
-    const fullRoutine = standaloneFinal.concat(cleanserFinal, activesFinal, spfFinal);
-
-    // Sort by order of use
-    const fullRoutineSorted = fullRoutine.sort(function(a, b) {
-      return a.order - b.order;
-    });
-
-    console.log(fullRoutineSorted);
+    const fullRoutineSorted = standaloneFinal
+      .concat(cleanserFinal, activesFinal)
+      .sort(function(a, b) {
+        return a.order - b.order;
+      });
 
     // TURN ROUTINE INTO HTML & PRINT ON THE SITE
 
@@ -567,4 +588,21 @@ $(document).ready(function() {
       300
     );
   });
+};
+
+skinApp.scrollInit = () => {
+  skinApp.scrollTool(".labelHeader", "#formSectionOne");
+  skinApp.scrollTool(".labelSectionOne", "#formSectionTwo");
+  skinApp.scrollTool(".labelSectionTwo", "#formSectionThree");
+  skinApp.scrollTool(".labelSectionThree", "#formSectionFour");
+};
+
+skinApp.init = () => {
+  skinApp.scrollInit();
+  skinApp.formReset();
+  skinApp.formSubmit();
+};
+
+$(document).ready(function() {
+  skinApp.init();
 });
