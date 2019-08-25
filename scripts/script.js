@@ -278,7 +278,7 @@ let standaloneScore = [
   },
   {
     category: "sheetMask",
-    displayName: "Sheet Mask",
+    displayName: "Sheet Mask (Nights)",
     order: 16,
     description:
       "One of the easiest ways to attain that glowing, dewy look. Sheet masks combine several active ingredients to provide a deep treatment for all types of skin concerns.",
@@ -306,13 +306,12 @@ let standaloneScore = [
   },
   {
     category: "spf",
-    displayName: "SPF",
+    displayName: "SPF (Mornings)",
     order: 15,
     description:
       "Arguably the most important step for anti-aging, not to mention preventing skin cancer.",
-    productReco: "Dr. G Brightening Peeling Gel",
-    link:
-      "https://www.amazon.ca/Dr-G-Brightening-Peeling-Gel-Ounce/dp/B007TFW0B6"
+    productReco: "Missha Mild Essence Sun Milk SPF 50/PA+++",
+    link: "https://sokoglam.com/products/missha-mild-essence-sun-milk"
   }
 ];
 
@@ -576,6 +575,8 @@ skinApp.formSubmit = () => {
     $(".resultHeadline").html(`Your Routine`);
 
     skinApp.resultIterator(fullRoutineSorted);
+
+    
 
     $(".buttonBox").html(
       `<label for="resetBox" class="visuallyHidden">Click here to reset your answers and start again.</label><input type="reset" value="Try Again?" id="resetBox" class="resetBox"/>`

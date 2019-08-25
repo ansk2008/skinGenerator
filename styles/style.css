@@ -669,7 +669,7 @@ fieldset {
 }
 
 .resultSection {
-  padding: 0 0 6vw 0;
+  padding: 0;
 }
 
 .resultSection h4.resultHeadline {
@@ -723,6 +723,7 @@ fieldset {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-bottom: 6vw;
 }
 
 input[type="reset"] {
@@ -732,10 +733,29 @@ input[type="reset"] {
   border: none;
   padding: 0;
   margin-top: 2.5vw;
+  font-size: 2.5rem;
 }
 
 input[type="reset"]:hover {
   color: #ea5c5a;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3%;
+}
+
+.fb-share-button {
+  margin-right: 1%;
+}
+
+.twitter-share-button {
+  margin-left: 1%;
 }
 
 @media (max-width: 970px) {

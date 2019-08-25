@@ -1,262 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Skincare Generator</title>
 
-    <script src="https://kit.fontawesome.com/54cc1dc10a.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Skincare Generator</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Ramaraja&display=swap" rel="stylesheet">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@konraddroeske">
+  <meta name="twitter:creator" content="@konradmansion">
+  <meta name="twitter:title" content="Skincare Generator">
+  <meta name="twitter:description"
+    content="Create a personalized step-by-step routine based on modern skin care principles.">
+  <meta name="twitter:image" content="https://skingenerator.konraddroeske.com/assets/photo4_cropped.jpg">
 
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
+  <meta property="og:url" content="https://skingenerator.konraddroeske.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Skincare Generator" />
+  <meta property="og:description"
+    content="Create a personalized step-by-step routine based on modern skin care principles." />
+  <meta property="og:image" content="https://skingenerator.konraddroeske.com/assets/photo4_cropped.jpg" />
 
-  <body>
-    <header>
-      <div class="headerWrapper">
-        <h1>Skincare <span>Generator</span></h1>
-        <p>Personalized routines based on modern skin care principles.</p>
-        <a aria-label="Jump to the first question." href="#" class="labelHeader">
-            <i aria-hidden class="fas fa-angle-down"></i>
-        </a>
+  <script src="https://kit.fontawesome.com/54cc1dc10a.js"></script>
 
-        <div class="square"></div>
-        <div class="circle"></div>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Ramaraja&display=swap" rel="stylesheet">
 
-      </div>
-    </header>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
 
-    <main>
-      <form
-        action="#"
-        method="#"
-        class="skincareForm"
-        autocomplete="off"
-        name="skincareForm"
-      >
-        <section class="formSectionOne">
-          <div class="formSectionOneSub wrapper">
-            <div class="leftBox" id="formSectionOne">
-              <div class="formSectionOneLeft">
-                <h3>Age</h3>
-                <p>
-                  Allows us to determine the emphasis on preventative and
-                  anti-aging products.
-                </p>
+<body>
+  <header>
+    <div class="headerWrapper">
+      <h1>Skincare <span>Generator</span></h1>
+      <p>Personalized routines based on modern skin care principles.</p>
+      <a aria-label="Jump to the first question." href="#" class="labelHeader">
+        <i aria-hidden class="fas fa-angle-down"></i>
+      </a>
 
-                <fieldset>
-                  <legend class="visuallyHidden">Select your age:</legend>
+      <div class="square"></div>
+      <div class="circle"></div>
 
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="age"
-                      value="youngAge"
-                      id="youngAge"
-                      checked="true"
-                    />
-                    <label for="youngAge" class="toggleLabel labelSectionOne"
-                      >Under 27</label
-                    >
-                  </div>
+    </div>
+  </header>
 
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="age"
-                      value="middleAge"
-                      id="middleAge"
-                    />
-                    <label for="middleAge" class="toggleLabel labelSectionOne"
-                      >27 to 35</label
-                    >
-                  </div>
+  <main>
+    <form action="#" method="#" class="skincareForm" autocomplete="off" name="skincareForm">
+      <section class="formSectionOne">
+        <div class="formSectionOneSub wrapper">
+          <div class="leftBox" id="formSectionOne">
+            <div class="formSectionOneLeft">
+              <h3>Age</h3>
+              <p>
+                Allows us to determine the emphasis on preventative and
+                anti-aging products.
+              </p>
 
-                  <div class="radioBox">
-                    <input type="radio" name="age" value="oldAge" id="oldAge" />
-                    <label for="oldAge" class="toggleLabel labelSectionOne"
-                      >36 and Over</label
-                    >
-                  </div>
-                </fieldset>
-              </div>
-            </div>
+              <fieldset>
+                <legend class="visuallyHidden">Select your age:</legend>
 
-            <div class="rightBox">
-              <div class="formSectionOneRight">
-                <img src="assets/photo1_cropped.jpg" alt="" />
-              </div>
+                <div class="radioBox">
+                  <input type="radio" name="age" value="youngAge" id="youngAge" checked="true" />
+                  <label for="youngAge" class="toggleLabel labelSectionOne">Under 27</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="age" value="middleAge" id="middleAge" />
+                  <label for="middleAge" class="toggleLabel labelSectionOne">27 to 35</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="age" value="oldAge" id="oldAge" />
+                  <label for="oldAge" class="toggleLabel labelSectionOne">36 and Over</label>
+                </div>
+              </fieldset>
             </div>
           </div>
-        </section>
 
-        <section class="formSectionTwo">
-          <div class="formSectionTwoSub wrapper">
-            <div class="leftBox">
-              <div class="formSectionTwoLeft">
-                <img src="assets/person1_cropped.jpg" alt="" />
-              </div>
-            </div>
-            <div class="rightBox" id="formSectionTwo">
-              <div class="formSectionTwoRight">
-                <h3>Skin Type</h3>
-                <p>
-                  Helps us select products that are suited to your skin type.
-                </p>
-
-                <fieldset>
-                  <legend class="visuallyHidden">Select your skin type:</legend>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="skinType"
-                      value="normal"
-                      id="normalSkin"
-                      checked="true"
-                    />
-                    <label for="normalSkin" class="toggleLabel labelSectionTwo"
-                      >Normal</label
-                    >
-                  </div>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="skinType"
-                      value="dry"
-                      id="drySkin"
-                    />
-                    <label for="drySkin" class="toggleLabel labelSectionTwo"
-                      >Dry</label
-                    >
-                  </div>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="skinType"
-                      value="oily"
-                      id="oilySkin"
-                    />
-                    <label for="oilySkin" class="toggleLabel labelSectionTwo"
-                      >Oily</label
-                    >
-                  </div>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="skinType"
-                      value="combo"
-                      id="comboSkin"
-                    />
-                    <label for="comboSkin" class="toggleLabel labelSectionTwo"
-                      >Combination</label
-                    >
-                  </div>
-                </fieldset>
-              </div>
+          <div class="rightBox">
+            <div class="formSectionOneRight">
+              <img src="assets/photo1_cropped.jpg" alt="" />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="formSectionThree">
-          <div class="formSectionThreeSub wrapper">
-            <div class="leftBox" id="formSectionThree">
-              <div class="formSectionThreeLeft">
-                <h3>Sensitivity</h3>
-                <p>
-                  Reduce inflammation and avoid adverse reactions, such as
-                  redness, dryness, peeling, and/or breakouts.
-                </p>
-
-                <fieldset>
-                  <legend class="visuallyHidden">
-                    Select your sensitivity:
-                  </legend>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="sensitivity"
-                      value="lowSen"
-                      id="lowSen"
-                      checked="true"
-                    />
-                    <label for="lowSen" class="toggleLabel labelSectionThree"
-                      >Low</label
-                    >
-                  </div>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="sensitivity"
-                      value="medSen"
-                      id="middleSen"
-                    />
-                    <label for="middleSen" class="toggleLabel labelSectionThree"
-                      >Medium</label
-                    >
-                  </div>
-
-                  <div class="radioBox">
-                    <input
-                      type="radio"
-                      name="sensitivity"
-                      value="highSen"
-                      id="highSen"
-                    />
-                    <label for="highSen" class="toggleLabel labelSectionThree"
-                      >High</label
-                    >
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-            <div class="rightBox">
-              <div class="formSectionThreeRight">
-                <img src="assets/photo4_cropped.jpg" alt="" />
-              </div>
+      <section class="formSectionTwo">
+        <div class="formSectionTwoSub wrapper">
+          <div class="leftBox">
+            <div class="formSectionTwoLeft">
+              <img src="assets/person1_cropped.jpg" alt="" />
             </div>
           </div>
-        </section>
+          <div class="rightBox" id="formSectionTwo">
+            <div class="formSectionTwoRight">
+              <h3>Skin Type</h3>
+              <p>
+                Helps us select products that are suited to your skin type.
+              </p>
 
-        <section class="formSectionFour" id="formSectionFour">
-          <div class="formSectionFourSub wrapper">
-            <label for="submitBox" class="visuallyHidden"
-              >Click here to submit your answers.</label
-            >
-            <input
-              type="submit"
-              value="Submit"
-              id="submitBox"
-              class="submitBox"
-            />
+              <fieldset>
+                <legend class="visuallyHidden">Select your skin type:</legend>
 
-            <h2 class="submitHeadline">
-                Let's find the skin care products that make sense for you.
-            </h2>
+                <div class="radioBox">
+                  <input type="radio" name="skinType" value="normal" id="normalSkin" checked="true" />
+                  <label for="normalSkin" class="toggleLabel labelSectionTwo">Normal</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="skinType" value="dry" id="drySkin" />
+                  <label for="drySkin" class="toggleLabel labelSectionTwo">Dry</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="skinType" value="oily" id="oilySkin" />
+                  <label for="oilySkin" class="toggleLabel labelSectionTwo">Oily</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="skinType" value="combo" id="comboSkin" />
+                  <label for="comboSkin" class="toggleLabel labelSectionTwo">Combination</label>
+                </div>
+              </fieldset>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="resultSection" id="resultSection">
-          <div class="resultSectionSub wrapper">
-            <h4 class="resultHeadline"></h4>
-            <ul class="resultList"></ul>
-            <div class="buttonBox"></div>
+      <section class="formSectionThree">
+        <div class="formSectionThreeSub wrapper">
+          <div class="leftBox" id="formSectionThree">
+            <div class="formSectionThreeLeft">
+              <h3>Sensitivity</h3>
+              <p>
+                Reduce inflammation and avoid adverse reactions, such as
+                redness, dryness, peeling, and/or breakouts.
+              </p>
+
+              <fieldset>
+                <legend class="visuallyHidden">
+                  Select your sensitivity:
+                </legend>
+
+                <div class="radioBox">
+                  <input type="radio" name="sensitivity" value="lowSen" id="lowSen" checked="true" />
+                  <label for="lowSen" class="toggleLabel labelSectionThree">Low</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="sensitivity" value="medSen" id="middleSen" />
+                  <label for="middleSen" class="toggleLabel labelSectionThree">Medium</label>
+                </div>
+
+                <div class="radioBox">
+                  <input type="radio" name="sensitivity" value="highSen" id="highSen" />
+                  <label for="highSen" class="toggleLabel labelSectionThree">High</label>
+                </div>
+              </fieldset>
+            </div>
           </div>
-        </section>
-      </form>
-    </main>
+          <div class="rightBox">
+            <div class="formSectionThreeRight">
+              <img src="assets/photo4_cropped.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer></footer>
+      <section class="formSectionFour" id="formSectionFour">
+        <div class="formSectionFourSub wrapper">
+          <label for="submitBox" class="visuallyHidden">Click here to submit your answers.</label>
+          <input type="submit" value="Submit" id="submitBox" class="submitBox" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="scripts/script.js"></script>
+          <h2 class="submitHeadline">
+            Let's find the skin care products that make sense for you.
+          </h2>
+        </div>
+      </section>
 
-  </body>
+      <section class="resultSection" id="resultSection">
+        <div class="resultSectionSub wrapper">
+          <h4 class="resultHeadline"></h4>
+          <ul class="resultList"></ul>
+          <div class="buttonBox"></div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+
+    <div class="fb-share-button" data-href="https://skingenerator.konraddroeske.com" data-layout="button"
+      data-size="large">
+      <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fskingenerator.konraddroeske.com%2F&amp;src=sdkpreparse"
+        class="fb-xfbml-parse-ignore">Share</a>
+    </div>
+
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20skincare%20routine%20generator." data-size="large">
+      Tweet</a><link rel="canonical" href="https://skingenerator.konraddroeske.com">
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="scripts/script.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
+
+</body>
+
 </html>
