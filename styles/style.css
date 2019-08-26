@@ -275,8 +275,8 @@ html {
   left: -1000px;
   top: 0;
   z-index: 999;
-  background: #a0d0f8;
-  color: #000003;
+  background: #f8dd74;
+  color: #000106;
   padding: 10px;
   font-family: 'Raleway', sans-serif;
 }
@@ -323,11 +323,11 @@ img {
 
 html {
   font-family: "Ramaraja", serif;
-  color: #000003;
+  color: #000106;
 }
 
 h1 {
-  color: #ea5c5a;
+  color: #4a61e3;
   font-size: 7rem;
   text-align: center;
   line-height: 0.7;
@@ -346,9 +346,9 @@ h3 {
 h4 {
   font-size: 5rem;
   margin: 0;
-  color: #a0d0f8;
+  color: #f8dd74;
   min-width: 130px;
-  text-shadow: -1px -1px 0 #000003, 1px -1px 0 #000003, -1px 1px 0 #000003, 1px 1px 0 #000003;
+  text-shadow: -1px -1px 0 #000106, 1px -1px 0 #000106, -1px 1px 0 #000106, 1px 1px 0 #000106;
 }
 
 h5 {
@@ -369,15 +369,15 @@ input[type="reset"] {
 
 a {
   text-decoration: none;
-  color: #ea5c5a;
+  color: #4a61e3;
 }
 
 a:visited {
-  color: #ea5c5a;
+  color: #4a61e3;
 }
 
 a:hover, a:active, a:focus {
-  color: #000003;
+  color: #000106;
 }
 
 p {
@@ -388,15 +388,15 @@ p {
 
 p a {
   font-weight: 600;
-  color: #000003;
+  color: #000106;
 }
 
 p a:visited {
-  color: #000003;
+  color: #000106;
 }
 
 p a:hover, p a:active, p a:focus {
-  color: #ea5c5a;
+  color: #4a61e3;
 }
 
 @media (max-width: 800px) {
@@ -445,7 +445,7 @@ header p {
 
 div.square {
   position: absolute;
-  background-color: #a0d0f8;
+  background-color: #f8dd74;
   border: 10px solid white;
   width: 150px;
   height: 150px;
@@ -503,8 +503,8 @@ div.circle {
 }
 
 body {
-  background: #a0d0f8;
-  border: 10px solid #ea5c5a;
+  background: #f8dd74;
+  border: 10px solid #4a61e3;
   overflow-x: hidden;
 }
 
@@ -539,7 +539,7 @@ ul {
 }
 
 .leftBox {
-  border-right: 1px solid #000003;
+  border-right: 1px solid #000106;
 }
 
 .formSectionOneLeft,
@@ -562,13 +562,13 @@ ul {
 }
 
 .formSectionOneRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
 }
 
 .formSectionThreeRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
 }
 
 .formSectionTwoLeft,
@@ -582,8 +582,8 @@ ul {
 }
 
 .formSectionTwoLeft {
-  background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
 }
 
 .formSectionTwoLeft img {
@@ -674,39 +674,39 @@ fieldset {
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0);
-  border: 1px solid #000003;
+  border: 1px solid #000106;
   z-index: -1;
 }
 
 /* Change the background color when the toggle is checked */
 [type="radio"]:checked + .toggleLabel::before {
-  background: #000003;
+  background: #000106;
 }
 
 [type="radio"]:checked + .toggleLabel {
-  color: #a0d0f8;
+  color: #f8dd74;
 }
 
 [type="radio"]:hover + .toggleLabel::before {
-  background: #000003;
+  background: #000106;
 }
 
 [type="radio"]:hover + .toggleLabel {
-  color: #a0d0f8;
+  color: #f8dd74;
 }
 
 [type="submit"] {
   text-align: center;
   width: 180px;
-  background: #a0d0f8;
-  color: #000003;
-  border: 1px solid #000003;
+  background: #f8dd74;
+  color: #000106;
+  border: 1px solid #000106;
   padding: 15px 0 2px 0;
 }
 
 [type="submit"]:hover, [type="submit"]:focus, [type="submit"]:active {
-  background: #000003;
-  color: #a0d0f8;
+  background: #000106;
+  color: #f8dd74;
 }
 
 .resultSection {
@@ -769,15 +769,15 @@ fieldset {
 
 input[type="reset"] {
   text-align: center;
-  color: #000003;
-  background: #a0d0f8;
+  color: #000106;
+  background: #f8dd74;
   border: none;
   padding: 0;
   margin-top: 2.5vw;
 }
 
 input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active {
-  color: #ea5c5a;
+  color: #4a61e3;
 }
 
 footer {
