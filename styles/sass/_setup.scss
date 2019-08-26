@@ -223,6 +223,28 @@ html {
   overflow: hidden;
 }
 
+// COLORS
+
+$background: #a0d0f8;
+$backgroundTwo: rgba(0, 0, 0, 0);
+$primary: #000003;
+$secondary: #ea5c5a;
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 0;
+  z-index: 999;
+  background: $background;
+  color: $primary;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 body {
   min-width: 320px;
 }
@@ -236,16 +258,12 @@ img {
   width: 80%;
   margin: 0 auto;
   max-width: 1280px;
-
-  // border: 1px solid red;
 }
 
 .headerWrapper {
   width: 60%;
   margin: 0 auto;
   max-width: 1280px;
-
-  // border: 1px solid red;
 }
 
 @media (max-width: 970px) {

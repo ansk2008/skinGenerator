@@ -5,12 +5,6 @@
 // color: white;
 // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
-// COLORS
-
-$background: #a0d0f8;
-$primary: #000003;
-$secondary: #ea5c5a;
-
 html {
   font-family: "Ramaraja", serif;
   color: $primary;
@@ -54,6 +48,10 @@ input[type="reset"] {
   font-size: 2rem;
 }
 
+input[type="reset"] {
+  font-size: 2.5rem;
+}
+
 a {
   text-decoration: none;
   color: $secondary;
@@ -92,7 +90,7 @@ p {
   }
 
   h4 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     min-width: 105px;
   }
 }
@@ -105,15 +103,15 @@ p {
   h2 {
     font-size: 2rem;
   }
+
+  h4 {
+    font-size: 3rem;
+    min-width: 80px;
+  }
 }
 
 @media (max-width: 390px) {
   h1 {
     font-size: 3rem;
-  }
-
-  h4 {
-    font-size: 3rem;
-    min-width: 80px;
   }
 }

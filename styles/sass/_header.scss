@@ -1,69 +1,78 @@
 header {
-    padding: 35vh 0 12vh 0;
-    position: relative;
+  padding: 35vh 0 12vh 0;
+  position: relative;
 }
 
 h1 {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 header p {
-    margin: 20vh 0 0 0;
-    text-align: center;
+  margin: 20vh 0 0 0;
+  text-align: center;
 }
 
 div.square {
-    position: absolute;
-    background-color: $background;
-    border: 10px solid $secondary;
-    width: 100px;
-    height: 100px;
-    top: 6%;
-    left: 8%;
-    z-index: -100;
+  position: absolute;
+  background-color: $background;
+  border: 10px solid white;
+  width: 150px;
+  height: 150px;
+  top: 23vh;
+  left: 10%;
+  z-index: -10;
 }
 
 div.circle {
-    position: absolute;
-    background-color: $secondary;
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    right: 8%;
-    border-radius: 50%;
-    z-index: -100;
+  position: absolute;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  top: 55vh;
+  right: 10%;
+  border-radius: 50%;
+  z-index: -10;
 }
 
 .fa-angle-down {
-    text-align: center;
-    font-size: 3rem;
-    display: none;
+  text-align: center;
+  font-size: 3rem;
+  display: none;
 }
 
 @media (max-width: 800px) {
-    
-    header {
-        padding-bottom: 9vh;
+  header {
+    padding-bottom: 9vh;
 
-        p {
-            margin: 6vh 0 19vh 0;
-        }
-
-        div.square {
-            width: 60px;
-            height: 60px;
-        }
-
-        div.circle {
-            bottom: 22%;
-            width: 65px;
-            height: 65px;
-        }
+    p {
+      margin: 6vh 0 19vh 0;
     }
+  }
 
-    .fa-angle-down {
-        display: block;
-    }
-    
+  div.square {
+    width: 120px;
+    height: 120px;
+  }
+
+  div.circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .fa-angle-down {
+    display: block;
+  }
+}
+
+@media (max-width: 535px) {
+  div.square {
+    width: 90px;
+    height: 90px;
+  }
+
+  div.circle {
+    width: 90px;
+    height: 90px;
+  }
 }

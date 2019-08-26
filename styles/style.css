@@ -270,6 +270,21 @@ html {
   overflow: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 0;
+  z-index: 999;
+  background: #a0d0f8;
+  color: #000003;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 body {
   min-width: 320px;
 }
@@ -348,6 +363,10 @@ input[type="reset"] {
   font-size: 2rem;
 }
 
+input[type="reset"] {
+  font-size: 2.5rem;
+}
+
 a {
   text-decoration: none;
   color: #ea5c5a;
@@ -385,7 +404,7 @@ p a:hover, p a:active, p a:focus {
     font-size: 5rem;
   }
   h4 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     min-width: 105px;
   }
 }
@@ -397,15 +416,15 @@ p a:hover, p a:active, p a:focus {
   h2 {
     font-size: 2rem;
   }
+  h4 {
+    font-size: 3rem;
+    min-width: 80px;
+  }
 }
 
 @media (max-width: 390px) {
   h1 {
     font-size: 3rem;
-  }
-  h4 {
-    font-size: 3rem;
-    min-width: 80px;
   }
 }
 
@@ -427,23 +446,23 @@ header p {
 div.square {
   position: absolute;
   background-color: #a0d0f8;
-  border: 10px solid #ea5c5a;
-  width: 100px;
-  height: 100px;
-  top: 6%;
-  left: 8%;
-  z-index: -100;
+  border: 10px solid white;
+  width: 150px;
+  height: 150px;
+  top: 23vh;
+  left: 10%;
+  z-index: -10;
 }
 
 div.circle {
   position: absolute;
-  background-color: #ea5c5a;
-  width: 100px;
-  height: 100px;
-  bottom: 20%;
-  right: 8%;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  top: 55vh;
+  right: 10%;
   border-radius: 50%;
-  z-index: -100;
+  z-index: -10;
 }
 
 .fa-angle-down {
@@ -459,23 +478,34 @@ div.circle {
   header p {
     margin: 6vh 0 19vh 0;
   }
-  header div.square {
-    width: 60px;
-    height: 60px;
+  div.square {
+    width: 120px;
+    height: 120px;
   }
-  header div.circle {
-    bottom: 22%;
-    width: 65px;
-    height: 65px;
+  div.circle {
+    width: 120px;
+    height: 120px;
   }
   .fa-angle-down {
     display: block;
   }
 }
 
+@media (max-width: 535px) {
+  div.square {
+    width: 90px;
+    height: 90px;
+  }
+  div.circle {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 body {
   background: #a0d0f8;
   border: 10px solid #ea5c5a;
+  overflow-x: hidden;
 }
 
 ul {
@@ -491,10 +521,21 @@ ul {
   display: flex;
 }
 
+.leftBox div.circle {
+  left: -15%;
+  top: -50vh;
+}
+
+.rightBox div.square {
+  left: 80%;
+  top: -75vh;
+}
+
 .leftBox,
 .rightBox {
   width: 50%;
   padding: 6vw 0;
+  position: relative;
 }
 
 .leftBox {
@@ -521,13 +562,13 @@ ul {
 }
 
 .formSectionOneRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #a0d0f8), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to right, #a0d0f8 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
 }
 
 .formSectionThreeRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #a0d0f8), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to right, #a0d0f8 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
 }
 
 .formSectionTwoLeft,
@@ -541,8 +582,8 @@ ul {
 }
 
 .formSectionTwoLeft {
-  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #a0d0f8), color-stop(30%, #ea5c5a));
-  background: linear-gradient(to left, #a0d0f8 30%, #ea5c5a 30%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #ea5c5a));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #ea5c5a 30%);
 }
 
 .formSectionTwoLeft img {
@@ -632,7 +673,7 @@ fieldset {
   left: 0;
   width: 100%;
   text-align: center;
-  background: #a0d0f8;
+  background: rgba(0, 0, 0, 0);
   border: 1px solid #000003;
   z-index: -1;
 }
@@ -663,7 +704,7 @@ fieldset {
   padding: 15px 0 2px 0;
 }
 
-[type="submit"]:hover {
+[type="submit"]:hover, [type="submit"]:focus, [type="submit"]:active {
   background: #000003;
   color: #a0d0f8;
 }
@@ -733,10 +774,9 @@ input[type="reset"] {
   border: none;
   padding: 0;
   margin-top: 2.5vw;
-  font-size: 2.5rem;
 }
 
-input[type="reset"]:hover {
+input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active {
   color: #ea5c5a;
 }
 

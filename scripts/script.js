@@ -1,3 +1,6 @@
+// For Rellax.JS PlugIn
+var rellax = new Rellax(".rellax");
+
 const pointSystem = {
   age: {
     youngAge: {
@@ -291,7 +294,7 @@ let standaloneScore = [
     order: 14,
     description:
       "Essential to maintaining your skin's natural moisture barrier and keeping your complexion supple, clear, and glowing.",
-    productReco: "CosRX Advanced Snail 92 All in one Cream",
+    productReco: "CosRX Advanced Snail 92 All In One Cream",
     link: "https://www.amazon.ca/Cosrx-advanced-snail-cream-100ml/dp/B01LEJ5MSK"
   },
   {
