@@ -275,8 +275,8 @@ html {
   left: -1000px;
   top: 0;
   z-index: 999;
-  background: #f8dd74;
-  color: #000106;
+  background: #d7ffea;
+  color: #000000;
   padding: 10px;
   font-family: 'Raleway', sans-serif;
 }
@@ -323,11 +323,11 @@ img {
 
 html {
   font-family: "Ramaraja", serif;
-  color: #000106;
+  color: #000000;
 }
 
 h1 {
-  color: #4a61e3;
+  color: #3100b0;
   font-size: 7rem;
   text-align: center;
   line-height: 0.7;
@@ -346,9 +346,9 @@ h3 {
 h4 {
   font-size: 5rem;
   margin: 0;
-  color: #f8dd74;
+  color: #d7ffea;
   min-width: 130px;
-  text-shadow: -1px -1px 0 #000106, 1px -1px 0 #000106, -1px 1px 0 #000106, 1px 1px 0 #000106;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 
 h5 {
@@ -369,15 +369,15 @@ input[type="reset"] {
 
 a {
   text-decoration: none;
-  color: #4a61e3;
+  color: #3100b0;
 }
 
 a:visited {
-  color: #4a61e3;
+  color: #3100b0;
 }
 
 a:hover, a:active, a:focus {
-  color: #000106;
+  color: #000000;
 }
 
 p {
@@ -388,15 +388,15 @@ p {
 
 p a {
   font-weight: 600;
-  color: #000106;
+  color: #000000;
 }
 
 p a:visited {
-  color: #000106;
+  color: #000000;
 }
 
 p a:hover, p a:active, p a:focus {
-  color: #4a61e3;
+  color: #3100b0;
 }
 
 @media (max-width: 800px) {
@@ -445,7 +445,7 @@ header p {
 
 div.square {
   position: absolute;
-  background-color: #f8dd74;
+  background-color: #d7ffea;
   border: 10px solid white;
   width: 150px;
   height: 150px;
@@ -503,8 +503,8 @@ div.circle {
 }
 
 body {
-  background: #f8dd74;
-  border: 10px solid #4a61e3;
+  background: #d7ffea;
+  border: 10px solid #3100b0;
   overflow-x: hidden;
 }
 
@@ -539,7 +539,7 @@ ul {
 }
 
 .leftBox {
-  border-right: 1px solid #000106;
+  border-right: 1px solid #000000;
 }
 
 .formSectionOneLeft,
@@ -562,13 +562,13 @@ ul {
 }
 
 .formSectionOneRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #3100b0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #3100b0 30%);
 }
 
 .formSectionThreeRight {
-  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #3100b0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, #3100b0 30%);
 }
 
 .formSectionTwoLeft,
@@ -582,8 +582,8 @@ ul {
 }
 
 .formSectionTwoLeft {
-  background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #4a61e3));
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #4a61e3 30%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(30%, #3100b0));
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 30%, #3100b0 30%);
 }
 
 .formSectionTwoLeft img {
@@ -674,40 +674,40 @@ fieldset {
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0);
-  border: 1px solid #000106;
+  border: 1px solid #000000;
   z-index: -1;
 }
 
 /* Change the background color when the toggle is checked */
 [type="radio"]:checked + .toggleLabel::before {
-  background: #000106;
+  background: #000000;
 }
 
 [type="radio"]:checked + .toggleLabel {
-  color: #f8dd74;
+  color: #d7ffea;
 }
 
 [type="radio"]:hover + .toggleLabel::before {
-  background: #000106;
+  background: #000000;
 }
 
 [type="radio"]:hover + .toggleLabel {
-  color: #f8dd74;
+  color: #d7ffea;
 }
 
 [type="submit"] {
   text-align: center;
   width: 180px;
-  background: #f8dd74;
-  color: #000106;
-  border: 1px solid #000106;
+  background: #d7ffea;
+  color: #000000;
+  border: 1px solid #000000;
   padding: 15px 0 2px 0;
   cursor: pointer;
 }
 
 [type="submit"]:hover, [type="submit"]:focus, [type="submit"]:active {
-  background: #000106;
-  color: #f8dd74;
+  background: #000000;
+  color: #d7ffea;
 }
 
 .resultSection {
@@ -770,8 +770,8 @@ fieldset {
 
 input[type="reset"] {
   text-align: center;
-  color: #000106;
-  background: #f8dd74;
+  color: #000000;
+  background: #d7ffea;
   border: none;
   padding: 0;
   margin-top: 2.5vw;
@@ -779,7 +779,7 @@ input[type="reset"] {
 }
 
 input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active {
-  color: #4a61e3;
+  color: #3100b0;
 }
 
 footer {
