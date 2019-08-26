@@ -702,6 +702,7 @@ fieldset {
   color: #000106;
   border: 1px solid #000106;
   padding: 15px 0 2px 0;
+  cursor: pointer;
 }
 
 [type="submit"]:hover, [type="submit"]:focus, [type="submit"]:active {
@@ -774,6 +775,7 @@ input[type="reset"] {
   border: none;
   padding: 0;
   margin-top: 2.5vw;
+  cursor: pointer;
 }
 
 input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active {
