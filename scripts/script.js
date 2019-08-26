@@ -1,5 +1,9 @@
+//PLUG INS - Not sure what the best method to store/initialize so I followed the documentation.
+
 // For Rellax.JS PlugIn
 var rellax = new Rellax(".rellax");
+
+// DATA
 
 const pointSystem = {
   age: {
@@ -196,24 +200,24 @@ const pointSystem = {
     },
 
     highSen: {
-      oilCleanser: 1, //
-      foamCleanser: -1, //
-      gelCleanser: 2, //
-      exfoliator: -3, //
-      aha: -2, //
-      bha: -2, //
-      niacinamide: 1, //
-      retinoid: -1, //
-      vitaminC: -3, //
-      hyaluronic: 0, //
-      toner: 0, //
-      essence: 1, //
-      ampoule: 0, //
-      eyeCream: 0, //
-      sheetMask: 0, //
-      moisturizer: 0, //
-      spf: 0, //
-      nightMask: -1 //
+      oilCleanser: 1,
+      foamCleanser: -1,
+      gelCleanser: 2,
+      exfoliator: -3,
+      aha: -2,
+      bha: -2, 
+      niacinamide: 1, 
+      retinoid: -1, 
+      vitaminC: -3, 
+      hyaluronic: 0, 
+      toner: 0, 
+      essence: 1, 
+      ampoule: 0, 
+      eyeCream: 0, 
+      sheetMask: 0, 
+      moisturizer: 0, 
+      spf: 0, 
+      nightMask: -1 
     }
   }
 };
@@ -460,15 +464,6 @@ skinApp.resultIterator = finalResultArray => {
   }
 };
 
-{
-  /* <p>
-  <span>Recommended:</span>{" "}
-  <a href="${finalResultArray[i].link}">
-    ${finalResultArray[i].productReco}
-  </a>
-</p>; */
-}
-
 skinApp.formReset = () => {
   $("form").on("reset", function(event) {
     //remove html from results section
@@ -497,7 +492,6 @@ skinApp.formSubmit = () => {
     event.preventDefault();
 
     // clears routine, if a previous one existed
-    // $(".submitHeadline").html("");
     $(".resultHeadline").html("");
     $(".resultList").html("");
     $(".buttonBox").html("");
@@ -578,8 +572,6 @@ skinApp.formSubmit = () => {
     $(".resultHeadline").html(`Your Routine`);
 
     skinApp.resultIterator(fullRoutineSorted);
-
-    
 
     $(".buttonBox").html(
       `<label for="resetBox" class="visuallyHidden">Click here to reset your answers and start again.</label><input type="reset" value="Try Again?" id="resetBox" class="resetBox"/>`
